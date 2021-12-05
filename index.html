@@ -169,24 +169,23 @@
 
 </style>
 <script type="text/javascript">
-  require(['jquery', 'jquery/ui'], function($){ 
-
-  $(document).ready(function(){
-    $('#itemslider').carousel({ interval: 3000 });
-    $('.carousel-showmanymoveone .item').each(function(){
-    var itemToClone = $(this);
+ 
+  jQuery(document).ready(function(){
+    jQuery('#itemslider').carousel({ interval: 3000 });
+    jQuery('.carousel-showmanymoveone .item').each(function(){
+    var itemToClone = jQuery(this);
     for (var i=1;i<6;i++) {
     itemToClone = itemToClone.next();
     if (!itemToClone.length) {
-    itemToClone = $(this).siblings(':first');
+    itemToClone = jQuery(this).siblings(':first');
     }
     itemToClone.children(':first-child').clone()
     .addClass("cloneditem-"+(i))
-    .appendTo($(this));
+    .appendTo(jQuery(this));
     }
     });
     });
-  });
+  
 
 </script>
 <!-- Latest compiled and minified CSS -->
